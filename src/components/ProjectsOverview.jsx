@@ -128,6 +128,13 @@ const ProjectsOverview = () => {
     ? projects 
     : projects.filter(project => project.category === filter);
 
+  const Stats = [
+    { value: '1+', label: 'Years Experience' },
+    { value: '10+', label: 'Projects Completed' },
+    { value: '150+', label: 'Expert Team Members' },
+    { value: '98%', label: 'Client Satisfaction' }
+  ];
+
   return (
     <div className="projects-overview">
       <motion.h2 

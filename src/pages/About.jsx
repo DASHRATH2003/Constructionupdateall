@@ -66,15 +66,22 @@ const About = () => {
   const [scrollY, setScrollY] = useState(0);
   const aboutRef = useRef(null);
 
-  // Handle scroll for parallax effects
+  // Handle scroll for parallax effects and update background position
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      // Apply parallax effect to header background
+      if (aboutRef.current) {
+        const header = aboutRef.current.querySelector('.page-header');
+        if (header) {
+          header.style.backgroundPositionY = `${scrollY * 0.5}px`;
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [scrollY]);
   return (
     <div className="about-page" ref={aboutRef}>
       {/* Animated Header Section */}
@@ -124,7 +131,7 @@ const About = () => {
             </motion.h1>
 
             <motion.p variants={fadeIn}>
-              Discover the story, values, and expertise that make BuildMaster Construction the premier choice for your construction needs.
+              Discover the story, values, and expertise that make COBRIXA the premier choice for your construction needs.
             </motion.p>
 
             <motion.div
@@ -132,12 +139,12 @@ const About = () => {
               variants={staggerContainer}
             >
               <motion.div className="stat-item" variants={scaleIn}>
-                <h3>20+</h3>
+                <h3>2+</h3>
                 <p>Years Experience</p>
               </motion.div>
 
               <motion.div className="stat-item" variants={scaleIn}>
-                <h3>500+</h3>
+                <h3>10+</h3>
                 <p>Projects Completed</p>
               </motion.div>
 
@@ -183,7 +190,7 @@ const About = () => {
               variants={slideFromLeft}
             >
               <h3 className="subtitle">Who We Are</h3>
-              <p>Founded in 2000, BuildMaster Construction has grown from a small local contractor to a leading construction company serving the entire region. With a team of highly skilled professionals and a commitment to quality, we have successfully completed hundreds of projects ranging from residential homes to commercial complexes.</p>
+              <p>Founded in 2000, COBRIXA has grown from a small local contractor to a leading construction company serving the entire region. With a team of highly skilled professionals and a commitment to quality, we have successfully completed hundreds of projects ranging from residential homes to commercial complexes.</p>
 
               <p>Our journey has been defined by our unwavering dedication to craftsmanship, innovation, and client satisfaction. We believe that every project, regardless of size, deserves the highest level of attention and expertise.</p>
 
@@ -199,7 +206,7 @@ const About = () => {
                   <div className="year">2000</div>
                   <div className="content">
                     <h4>Company Founded</h4>
-                    <p>BuildMaster Construction was established with a vision to transform the construction industry with quality and innovation.</p>
+                    <p>COBRIXA was established with a vision to transform the construction industry with quality and innovation.</p>
                   </div>
                 </motion.div>
 
@@ -246,7 +253,7 @@ const About = () => {
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000&auto=format&fit=crop" alt="BuildMaster Construction Team" />
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1000&auto=format&fit=crop" alt="COBRIXA Team" />
               </motion.div>
 
               <motion.div
@@ -280,7 +287,7 @@ const About = () => {
                   color: colorTheme.dark
                 }}
               >
-                <span className="years">20+</span>
+                <span className="years">2+</span>
                 <span className="text">Years of Excellence</span>
               </motion.div>
             </motion.div>
@@ -437,7 +444,7 @@ const About = () => {
               style={{ background: colorTheme.primary }}
             ></motion.div>
             <h2>Why Choose Us</h2>
-            <p className="section-subtitle">What sets BuildMaster Construction apart from the competition</p>
+            <p className="section-subtitle">What sets COBRIXA apart from the competition</p>
           </motion.div>
 
           <motion.div
@@ -673,7 +680,7 @@ const About = () => {
               style={{ background: colorTheme.primary }}
             ></motion.div>
             <h2>Our Leadership Team</h2>
-            <p className="section-subtitle">Meet the experts behind BuildMaster Construction's success</p>
+            <p className="section-subtitle">Meet the experts behind COBRIXA's success</p>
           </motion.div>
 
           <motion.div
@@ -851,7 +858,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h3>15+</h3>
+                <h3>5+</h3>
                 <p>Professional Certifications</p>
               </motion.div>
 
@@ -862,7 +869,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <h3>250+</h3>
+                <h3>2+</h3>
                 <p>Years Combined Experience</p>
               </motion.div>
             </div>
@@ -952,17 +959,17 @@ const About = () => {
             >
               <motion.div className="contact-item" variants={fadeIn}>
                 <i className="fas fa-phone" style={{ color: colorTheme.accent }}></i>
-                <span>(555) 123-4567</span>
+                <span>+91 87627 85555</span>
               </motion.div>
 
               <motion.div className="contact-item" variants={fadeIn}>
                 <i className="fas fa-envelope" style={{ color: colorTheme.accent }}></i>
-                <span>info@buildmaster.com</span>
+                <span>info@cobrixa.com</span>
               </motion.div>
 
               <motion.div className="contact-item" variants={fadeIn}>
                 <i className="fas fa-map-marker-alt" style={{ color: colorTheme.accent }}></i>
-                <span>123 Construction Ave, Building City</span>
+                <span>VJJF+87W Bengaluru, Karnataka 12°52'51.1"N 77°37'23.6"E</span>
               </motion.div>
             </motion.div>
           </motion.div>

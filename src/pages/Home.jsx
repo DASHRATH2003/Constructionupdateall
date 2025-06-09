@@ -114,7 +114,7 @@ const Home = () => {
     {
       title: 'Shopping Mall Renovation',
       category: 'Commercial',
-      image: 'https://images.unsplash.com/photo-1555443805-658637491dd4?q=80&w=1000&auto=format&fit=crop',
+      image: 'https://images.adsttc.com/media/images/5013/c903/28ba/0d39/6300/1021/newsletter/stringio.jpg?1414410342',
       description: 'Complete renovation and modernization of an existing shopping center.'
     }
   ];
@@ -139,8 +139,8 @@ const Home = () => {
 
   // Company stats
   const stats = [
-    { value: '20+', label: 'Years Experience' },
-    { value: '500+', label: 'Projects Completed' },
+    { value: '2+', label: 'Years Experience' },
+    { value: '10+', label: 'Projects Completed' },
     { value: '150+', label: 'Expert Team Members' },
     { value: '98%', label: 'Client Satisfaction' }
   ];
@@ -335,7 +335,7 @@ const Home = () => {
       </section>
 
       {/* PC Construction Service Videos */}
-      <ServiceVideos />
+      
 
       {/* About Section */}
       <section className="py-20 bg-gray-50" ref={aboutRef}>
@@ -457,7 +457,7 @@ const Home = () => {
             >
               <div className="h-48 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop"
+                  src="https://w0.peakpx.com/wallpaper/205/649/HD-wallpaper-hotel-room-interior-design-luxury-hotel-apartments-modern-interior-design-classic-style-luxury-chandelier.jpg"
                   alt="Commercial Construction"
                   className="w-full h-full object-cover transition-all duration-500 hover:scale-110"
                 />

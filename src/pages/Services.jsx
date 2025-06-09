@@ -110,7 +110,7 @@ const Services = () => {
 
   // Company expertise data
   const expertise = [
-    { title: "20+ Years Experience", description: "Two decades of excellence in the construction industry", icon: "fa-medal" },
+    { title: "2+ Years Experience", description: "Excellence in the construction industry", icon: "fa-medal" },
     { title: "Certified Professionals", description: "Team of licensed and certified construction experts", icon: "fa-certificate" },
     { title: "Award-Winning Projects", description: "Recognition for outstanding construction achievements", icon: "fa-trophy" },
     { title: "Sustainable Practices", description: "Commitment to environmentally responsible construction", icon: "fa-leaf" }
